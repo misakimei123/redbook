@@ -1,0 +1,30 @@
+test:
+  key: value1
+
+redis:
+  addr: 127.0.0.1:6379
+
+db:
+  dsn: root:root@tcp(127.0.0.1:3308)/redbook
+
+db_migrate_dsn:
+  src: root:root@tcp(127.0.0.1:3308)/redbook
+  dst: root:root@tcp(127.0.0.1:3308)/redbook_intr
+
+mongodb:
+  dsn: mongodb://127.0.0.1:27017/
+  db: webook
+
+kafka:
+  addr:
+    - "192.168.252.128:29092"
+
+grpc:
+  client:
+    intr:
+      addr: "etcd:///service/interactive"
+      secure: False
+
+etcd:
+  addrs:
+    - "127.0.0.1:2379"
